@@ -1,0 +1,105 @@
+.bluebar:global {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  background: linear-gradient(
+    rgb(31, 47, 134) 0px,
+    rgb(49, 101, 196) 3%,
+    rgb(54, 130, 229) 6%,
+    rgb(68, 144, 230) 10%,
+    rgb(56, 131, 229) 12%,
+    rgb(43, 113, 224) 15%,
+    rgb(38, 99, 218) 18%,
+    rgb(35, 91, 214) 20%,
+    rgb(34, 88, 213) 23%,
+    rgb(33, 87, 214) 38%,
+    rgb(36, 93, 219) 54%,
+    rgb(37, 98, 223) 86%,
+    rgb(36, 95, 220) 89%,
+    rgb(33, 88, 212) 92%,
+    rgb(29, 78, 192) 95%,
+    rgb(25, 65, 165) 98%
+  );
+}
+
+.startbtn {
+  background-image: url("../../assets/xp_btn_norm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 35px;
+  outline: none;
+}
+
+.startbtn_active {
+  background-image: url("../../assets/xp_btn_clicked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 120px;
+  height: 35px;
+  outline: none;
+}
+
+.startbtn:hover {
+  background-image: url("../../assets/xp_btn_hover.png");
+}
+
+.startbtn:active {
+  background-image: url("../../assets/xp_btn_clicked.png");
+}
+
+.startbtn:focus {
+  outline: none;
+}
+
+.tabbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.icontray {
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: linear-gradient(
+    rgb(12, 89, 185) 1%,
+    rgb(19, 158, 233) 6%,
+    rgb(24, 181, 242) 10%,
+    rgb(19, 155, 235) 14%,
+    rgb(18, 144, 232) 19%,
+    rgb(13, 141, 234) 63%,
+    rgb(13, 159, 241) 81%,
+    rgb(15, 158, 237) 88%,
+    rgb(17, 155, 233) 91%,
+    rgb(19, 146, 226) 94%,
+    rgb(19, 126, 215) 97%,
+    rgb(9, 91, 201) 100%
+  );
+  box-shadow: rgb(24 187 255) 1px 0px 1px inset;
+}
+
+.iconrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  width: 90px;
+}
+
+@media screen and (max-width: 903px) {
+  .icontray {
+    width: 270px;
+  }
+}
