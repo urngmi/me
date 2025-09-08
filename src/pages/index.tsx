@@ -34,12 +34,12 @@ export default function Home() {
   };
 
   const handleOpenGitHub = () => {
-    window.open("https://github.com/firwer", "_blank", "noreferrer");
+    window.open("https://github.com/urngmi", "_blank", "noreferrer");
   };
 
   const handleOpenLinkedin = () => {
     window.open(
-      "https://www.linkedin.com/in/poh-wei-pin-7b9061183/",
+      "https://www.linkedin.com/in/omkar-bhor-0906542a0/",
       "_blank",
       "noreferrer"
     );
@@ -52,8 +52,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wei Pin&apos;s Personal Website - Home Page</title>
-        <meta name="description" content="My Personal Space" />
+        <title>Omkar Bhor - Software Developer</title>
+        <meta name="description" content="Omkar Bhor - Software Developer Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>

@@ -83,7 +83,7 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
             textShadow: "1px 1px #000000",
           }}
         >
-          Wei Pin&apos;s PC
+          Omkar&apos;s PC
         </p>
       </div>
       <hr className={styles.orangehr} />
