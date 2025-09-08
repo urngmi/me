@@ -1,6 +1,7 @@
 {
   "name": "my-winxp-portfolio",
   "version": "0.1.0",
+  "description": "Omkar Bhor's Windows XP-style portfolio website built with Next.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
