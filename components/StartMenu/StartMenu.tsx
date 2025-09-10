@@ -64,19 +64,14 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
           style={{
             width: 55,
             height: 55,
-            backgroundColor: '#f0f0f0',
+            backgroundColor: 'transparent',
             border: "2px solid rgba(222, 222, 222, 0.8)",
             borderRadius: "3px",
             boxShadow: "0 0 3px 3px rgba(0, 0, 0, 0.2)",
             margin: "0 5px 0 5px",
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '10px',
-            color: '#666'
+            display: 'none'
           }}
         >
-          Photo
         </div>
         <p
           style={{

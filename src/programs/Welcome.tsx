@@ -33,8 +33,8 @@ Arkham series. Music is a big part of my daily routine — I vibe to all kinds, 
 Kanye West, Travis Scott, Damien Bala, and Sabrocki are always on my playlist. Movies? I'm a straight-up 
 cinephile — I watch 3–4 films a week and love exploring everything from classics to new releases. 
 Basketball is my go-to sport whenever I want some action outdoors. I've got a long travel bucket list 
-and love the idea of exploring new places. Recently, I've been getting into photography — learning 
-pro techniques and planning to invest in proper gear soon.`;
+and love the idea of exploring new places. I'm always eager to learn new technologies and take on 
+challenging projects that push my programming skills to the next level.`;
 
 const INTERESTS2 = `One of the defining moments of my CS degree has been building a GPT-style language 
 model completely from scratch in C++. At first, it felt impossible — the math behind transformers, the 
@@ -143,12 +143,6 @@ const Welcome = ({ id }: props) => {
                 tooltip="Reach out to me!"
                 onClick={() => handleRunApp(1)}
               />
-              <WelcomeIcon
-                img={gallery}
-                text={"My Photography Collection"}
-                tooltip="Click to view!"
-                onClick={() => handleRunApp(4)}
-              />
             </div>
           </div>
         </div>
@@ -157,27 +151,7 @@ const Welcome = ({ id }: props) => {
           <h3 className={styles.welcome_text}>About Me</h3>
           <p className={styles.subtitle}></p>
           <div className={styles.content}>
-            <div className={styles.pic_col}>
-              <div 
-                style={{
-                  width: 200,
-                  height: 200,
-                  backgroundColor: '#f0f0f0',
-                  border: '2px solid #ccc',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '10px 0',
-                  fontSize: '14px',
-                  color: '#666'
-                }}
-              >
-                Profile Photo
-                <br />
-                Coming Soon
-              </div>
-            </div>
-            <div className={styles.text_col}>
+            <div className={styles.text_col} style={{width: '100%'}}>
               <p className={styles.subtitle}>{INTRO}</p>
               <h3 className={styles.subtitle_header}>
                 Why a personal website like this?
