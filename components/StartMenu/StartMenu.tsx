@@ -1,5 +1,4 @@
 import styles from "./StartMenu.module.css";
-import userprofile from "../../assets/userprofile.jpg";
 import folder from "../../assets/folder_plain.png";
 import StartMenuItem from "components/StartMenuItem/StartMenuItem";
 import recentdoc from "../../assets/recentdoc.png";
@@ -61,20 +60,24 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
     <div className={styles.startmenu}>
       <hr className={styles.whitehr} />
       <div className={styles.menutopbar}>
-        <Image
-          alt="userprofile"
-          src={userprofile.src}
-          width={55}
-          height={55}
+        <div
           style={{
-            border: "2px",
-            borderStyle: "solid",
+            width: 55,
+            height: 55,
+            backgroundColor: '#f0f0f0',
+            border: "2px solid rgba(222, 222, 222, 0.8)",
             borderRadius: "3px",
-            borderColor: "rgba(222, 222, 222, 0.8)",
             boxShadow: "0 0 3px 3px rgba(0, 0, 0, 0.2)",
             margin: "0 5px 0 5px",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '10px',
+            color: '#666'
           }}
-        />
+        >
+          Photo
+        </div>
         <p
           style={{
             fontSize: 16,

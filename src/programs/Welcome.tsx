@@ -16,10 +16,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/types";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import userprofile from "../../assets/userprofile.jpg";
-import userprofile2 from "../../assets/userprofile2.jpg";
-import ebc1 from "../../assets/ebc1.webp";
-import ebc2 from "../../assets/ebc2.webp";
+// Import placeholder or use default images when available
 
 const INTRO = `Hi, I'm Omkar Bhor, a CSE Student based in Pune, India. I am 
   currently a CSE Student at PCET's Nutan College of Engineering and Research (NCER) and I am
@@ -161,34 +158,24 @@ const Welcome = ({ id }: props) => {
           <p className={styles.subtitle}></p>
           <div className={styles.content}>
             <div className={styles.pic_col}>
-              <Image
-                alt="profile_pic"
-                src={userprofile.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
-              <Image
-                alt="profile_pic"
-                src={userprofile2.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
-              <Image
-                alt="profile_pic"
-                src={ebc1.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
-              <Image
-                alt="profile_pic"
-                src={ebc2.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
+              <div 
+                style={{
+                  width: 200,
+                  height: 200,
+                  backgroundColor: '#f0f0f0',
+                  border: '2px solid #ccc',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '10px 0',
+                  fontSize: '14px',
+                  color: '#666'
+                }}
+              >
+                Profile Photo
+                <br />
+                Coming Soon
+              </div>
             </div>
             <div className={styles.text_col}>
               <p className={styles.subtitle}>{INTRO}</p>
