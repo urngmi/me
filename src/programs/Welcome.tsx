@@ -115,7 +115,7 @@ const Welcome = ({ id }: props) => {
                 tooltip="Connect with me!"
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/in/omkarbhor4011/",
+                    "https://www.linkedin.com/in/BhorOmkar/",
                     "_blank",
                     "noreferrer"
                   );
