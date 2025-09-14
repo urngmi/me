@@ -24,9 +24,33 @@ import MyWork from "@/programs/MyWork";
 import MsgBox from "components/MsgBox/MsgBox";
 import Welcome from "@/programs/Welcome";
 import MyGallery from "@/programs/MyGallery";
+import BootScreen from "components/BootScreen/BootScreen";
+import { hasVisitedBefore, setVisited } from "@/util/bootUtils";
+
 export default function Home() {
   const Tabs = useSelector((state: RootState) => state.tab.tray);
   const currTabID = useSelector((state: RootState) => state.tab.id);
+  const [showBootScreen, setShowBootScreen] = useState(false);
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure component only renders on client side to prevent hydration mismatch
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Check if this is a first-time visit (only on client side)
+  useEffect(() => {
+    if (isClient && !hasVisitedBefore()) {
+      setIsFirstVisit(true);
+      setShowBootScreen(true);
+      setVisited();
+    }
+  }, [isClient]);
+
+  const handleBootComplete = () => {
+    setShowBootScreen(false);
+  };
 
   const handleRunApp = (e: number) => {
     const newTab = { ...AppDirectory.get(e), id: uuidv4(), zIndex: currTabID };
@@ -57,6 +81,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
+      {isClient && showBootScreen && <BootScreen onBootComplete={handleBootComplete} />}
       <main className={styles.main}>
         <div
           style={{
