@@ -82,7 +82,7 @@ const BootScreen: React.FC<BootScreenProps> = ({ onBootComplete }) => {
         />
         {showLoading && (
           <div className={styles.loadingText}>
-            Loading Omkar's Portfolio...
+            Loading Omkar&apos;s Portfolio...
           </div>
         )}
         <div className={styles.skipHint}>
