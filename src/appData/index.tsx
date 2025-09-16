@@ -14,6 +14,7 @@ import cmd from "../../assets/cmd.png";
 import mycomputer from "../../assets/mycomputer.png";
 import gallery from "../../assets/folder_image.png";
 import outlook from "../../assets/outlook.png";
+import doom from "../../assets/doom.svg";
 import dsta from "../../assets/workaccordion/dsta.png";
 import gdsc from "../../assets/workaccordion/gdsc.png";
 import file from "../../assets/workaccordion/file.png";
@@ -170,6 +171,20 @@ export const AppDirectory: Map<number, Tab> = new Map([
       isMinimized: false,
       zIndex: 0,
       program: App.MYWORK,
+      prompt: false,
+      backBtnActive: false,
+    },
+  ],
+  [
+    3,
+    {
+      id: 0,
+      title: "DOOM - Classic FPS",
+      message: "",
+      Icon: doom,
+      isMinimized: false,
+      zIndex: 0,
+      program: App.DOOM,
       prompt: false,
       backBtnActive: false,
     },

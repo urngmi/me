@@ -1,0 +1,6 @@
+<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+  <rect width="45" height="45" fill="#800000" rx="3"/>
+  <text x="22.5" y="30" text-anchor="middle" fill="#FF6666" font-family="Arial Black" font-size="16" font-weight="bold">DOOM</text>
+  <circle cx="15" cy="15" r="3" fill="#FF0000"/>
+  <circle cx="30" cy="15" r="3" fill="#FF0000"/>
+</svg>

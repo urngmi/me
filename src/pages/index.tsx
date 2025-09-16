@@ -11,6 +11,7 @@ import github from "../../assets/github.png";
 import cmd from "../../assets/cmd.png";
 import solitare from "../../assets/solitaire.png";
 import linkedin from "../../assets/linkedin.png";
+import doom from "../../assets/doom.svg";
 import WinForm from "components/WinForm/WinForm";
 import { useEffect, useState } from "react";
 import store from "@/redux/store";
@@ -24,33 +25,10 @@ import MyWork from "@/programs/MyWork";
 import MsgBox from "components/MsgBox/MsgBox";
 import Welcome from "@/programs/Welcome";
 import MyGallery from "@/programs/MyGallery";
-import BootScreen from "components/BootScreen/BootScreen";
-import { hasVisitedBefore, setVisited } from "@/util/bootUtils";
-
+import Doom from "@/programs/Doom";
 export default function Home() {
   const Tabs = useSelector((state: RootState) => state.tab.tray);
   const currTabID = useSelector((state: RootState) => state.tab.id);
-  const [showBootScreen, setShowBootScreen] = useState(false);
-  const [isFirstVisit, setIsFirstVisit] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  // Ensure component only renders on client side to prevent hydration mismatch
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Check if this is a first-time visit (only on client side)
-  useEffect(() => {
-    if (isClient && !hasVisitedBefore()) {
-      setIsFirstVisit(true);
-      setShowBootScreen(true);
-      setVisited();
-    }
-  }, [isClient]);
-
-  const handleBootComplete = () => {
-    setShowBootScreen(false);
-  };
 
   const handleRunApp = (e: number) => {
     const newTab = { ...AppDirectory.get(e), id: uuidv4(), zIndex: currTabID };
@@ -81,7 +59,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
-      {isClient && showBootScreen && <BootScreen onBootComplete={handleBootComplete} />}
       <main className={styles.main}>
         <div
           style={{
@@ -129,6 +106,12 @@ export default function Home() {
 
           <DesktopIcon
             appID={7}
+            doubleClick={() => handleRunApp(3)}
+            title="Play DOOM"
+            img={doom}
+          />
+          <DesktopIcon
+            appID={8}
             doubleClick={() => void 0}
             title="My Hobbies"
             img={solitare}
@@ -155,6 +138,8 @@ export default function Home() {
                   <Welcome id={tab.id} />
                 ) : tab.program === App.MYGALLERY ? (
                   <MyGallery id={tab.id} />
+                ) : tab.program === App.DOOM ? (
+                  <Doom id={tab.id} />
                 ) : tab.program === App.ERROR ? (
                   <p>{tab.message}</p>
                 ) : tab.program === App.INFO ? (
