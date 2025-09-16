@@ -9,7 +9,6 @@ import bin from "../../assets/recycling_bin.png";
 import pdf from "../../assets/pdf.png";
 import github from "../../assets/github.png";
 import cmd from "../../assets/cmd.png";
-import solitare from "../../assets/solitaire.png";
 import linkedin from "../../assets/linkedin.png";
 import doom from "../../assets/doom.png";
 import WinForm from "components/WinForm/WinForm";
@@ -109,12 +108,6 @@ export default function Home() {
             doubleClick={() => handleRunApp(3)}
             title="Play DOOM"
             img={doom}
-          />
-          <DesktopIcon
-            appID={8}
-            doubleClick={() => void 0}
-            title="My Hobbies"
-            img={solitare}
           />
           {Tabs.map((tab, index) => {
             return tab.isMinimized ? (
