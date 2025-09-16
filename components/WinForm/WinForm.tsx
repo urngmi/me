@@ -75,12 +75,18 @@ const WinForm = (props: {
   const normalDisplay = isMinimized ? "none" : "inline";
   const normalWidth = isMaximized ? "100%" : "750px";
   const normalHeight = isMaximized ? "calc(100% - 40px)" : "75%";
+  
+  // Different positioning for DOOM to avoid overlap
+  const isDoom = props.programType === App.DOOM;
+  const topPosition = isMaximized ? "0" : (isDoom ? "5%" : "10%");
+  const leftPosition = isMaximized ? "0" : (isDoom ? "40%" : "20%");
+  
   return (
     <Draggable {...draggableProps}>
       <div
         style={{
-          top: isMaximized ? "0" : "10%",
-          left: isMaximized ? "0" : "20%",
+          top: topPosition,
+          left: leftPosition,
           bottom: isMaximized ? "20px" : "",
           position: "absolute",
           display: props.prompt ? promptDisplay : normalDisplay,
@@ -157,7 +163,7 @@ const WinForm = (props: {
           }
         >
           <div className={styles.windowsbody}>
-            {!props.prompt && (
+            {!props.prompt && props.programType !== App.DOOM && (
               <WinToolBar
                 title={props.title}
                 icon={props.icon}

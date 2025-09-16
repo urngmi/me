@@ -11,7 +11,7 @@ import github from "../../assets/github.png";
 import cmd from "../../assets/cmd.png";
 import solitare from "../../assets/solitaire.png";
 import linkedin from "../../assets/linkedin.png";
-import doom from "../../assets/doom.svg";
+import doom from "../../assets/doom.png";
 import WinForm from "components/WinForm/WinForm";
 import { useEffect, useState } from "react";
 import store from "@/redux/store";

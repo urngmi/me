@@ -8,7 +8,7 @@ import github from "../../assets/github.png";
 import cmd from "../../assets/cmd.png";
 import users from "../../assets/users.png";
 import butterfly from "../../assets/butterfly.png";
-import doom from "../../assets/doom.svg";
+import doom from "../../assets/doom.png";
 import { AppDirectory } from "@/appData";
 import store from "@/redux/store";
 import { addTab, setBackBtn } from "@/redux/tabSlice";
@@ -137,12 +137,6 @@ const Welcome = ({ id }: props) => {
                 text={"My Work"}
                 tooltip="Interesting projects I have done"
                 onClick={() => handleRunApp(2)}
-              />
-              <WelcomeIcon
-                img={doom}
-                text={"Play DOOM"}
-                tooltip="Classic FPS Game"
-                onClick={() => handleRunApp(3)}
               />
               <WelcomeIcon
                 img={outlook}

@@ -14,7 +14,7 @@ import cmd from "../../assets/cmd.png";
 import mycomputer from "../../assets/mycomputer.png";
 import gallery from "../../assets/folder_image.png";
 import outlook from "../../assets/outlook.png";
-import doom from "../../assets/doom.svg";
+import doom from "../../assets/doom.png";
 import dsta from "../../assets/workaccordion/dsta.png";
 import gdsc from "../../assets/workaccordion/gdsc.png";
 import file from "../../assets/workaccordion/file.png";
